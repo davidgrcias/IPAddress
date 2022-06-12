@@ -26,25 +26,20 @@
       </tr>
       <tr>
         <td>Google Maps</td>
-        <td style = "width: 450px; height: 450px;">
-          <iframe id = "gmaps" src="" style = "width: 100%; height: 100%;">
+        <td>
+          <iframe src="" id = "gmaps" style = "width: 450px; height: 450px;">
           </iframe>
         </td>
       </tr>
     </table>
 
     <script type="text/javascript">
-      $.getJSON('https://api.db-ip.com/v2/free/self', function(data){
-
-        var ip = data.ipAddress;
-
-        $.getJSON('https://ipapi.co/'+ip+'/json', function(data){
-          $("#ip").text(data.ip);
-          $('#country').text(data.country_name);
-          $('#city').text(data.region);
-          $('#isp').text(data.org);
-          $("#gmaps").attr("src", "https://www.google.com/maps?q="+data.latitude+","+data.longitude+"&output=embed");
-        })
+      $.getJSON('https://ipapi.co/json/', function(data){
+        $("#ip").text(data.ip);
+        $('#country').text(data.country_name);
+        $('#city').text(data.region);
+        $('#isp').text(data.org);
+        $("#gmaps").attr("src", "https://www.google.com/maps?q="+data.latitude+","+data.longitude+"&output=embed");
       })
     </script>
   </body>
