@@ -33,7 +33,7 @@
     </table>
 
     <script type="text/javascript">
-        $.getJSON('http://ip-api.com/json', function(data){
+        $.getJSON('https://ip-api.com/json', function(data){
           $("#ip").text(data.query);
           $('#isp').text(data.isp);
           $('#country').text(data.country);
