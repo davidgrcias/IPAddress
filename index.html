@@ -34,7 +34,7 @@
     </table>
 
     <script type="text/javascript">
-      $.getJSON('https://ipapi.co/json/', function(data){
+      $.getJSON('https://ipapi.co/json', function(data){
         $("#ip").text(data.ip);
         $('#country').text(data.country_name);
         $('#city').text(data.region);
